@@ -37,6 +37,9 @@ jobs:
       - name: "Use gcloud CLI"
         run: "gcloud info"
 
+      - name: Print a status update
+        run: echo "Starting the deployment build now..."
+
       - name: "Build Docker Image and push to GCP"
         run: gcloud builds submit --tag us-central1-docker.pkg.dev/notely-502913/notely-ar-repo/notely-app:latest .
 
