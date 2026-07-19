@@ -12,7 +12,7 @@ func TestGetAPIKey(t *testing.T) {
 		authHeader  string
 		expectedKey string
 		// A generic function to validate the error rule for each case
-		errCheck    func(error) bool 
+		errCheck func(error) bool
 	}{
 		{
 			name:        "Valid ApiKey header",
@@ -25,7 +25,7 @@ func TestGetAPIKey(t *testing.T) {
 			authHeader:  "",
 			expectedKey: "",
 			// Actively uses the "errors" package to check your sentinel error
-			errCheck:    func(err error) bool { return errors.Is(err, ErrNoAuthHeaderIncluded) },
+			errCheck: func(err error) bool { return errors.Is(err, ErrNoAuthHeaderIncluded) },
 		},
 		{
 			name:        "Malformed header",
