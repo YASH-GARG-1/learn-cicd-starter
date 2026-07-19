@@ -23,6 +23,6 @@ func GetAPIKey(headers http.Header) (string, error) {
 }
 
 func unused() {
-    // this function does nothing
-    // and is called nowhere
+	// this function does nothing
+	// and is called nowhere
 }
